@@ -21,11 +21,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class CreatePasteTest {
 
     private WebDriver driver;
-    private final String baseUrl = "https://pastebin.com/";
+    private final String baseUrl = "https://pastebin.io/";
     private final String codeText = 
-            '''git config --global user.name  "New Sheriff in Town"
-            git reset $(git commit-tree HEAD^{tree} -m "Legacy code")
-            git push origin master --force''';
+    	    "git config --global user.name  \"New Sheriff in Town\"\n" +
+    	    	    "git reset $(git commit-tree HEAD^{tree} -m \"Legacy code\")\n" +
+    	    	    "git push origin master --force";
+
     private final String pasteTitle = "how to gain dominance among developers";
 
     @BeforeEach
